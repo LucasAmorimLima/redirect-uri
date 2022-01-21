@@ -10,7 +10,9 @@ routes.get('/', async (req: Request,res: Response) => {
 })
 
 routes.get('/places/token', async (req: Request,res: Response) => {
+    console.log("first");
     const token  = Token.create(req.params)
+    console.log(req.params);
     return res.json(token)
 })
 
