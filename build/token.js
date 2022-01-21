@@ -41,8 +41,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = require("express");
 var TokenSchema_1 = __importDefault(require("./TokenSchema"));
-;
 var routes = (0, express_1.Router)();
+routes.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        return [2 /*return*/, res.json("hello word ")];
+    });
+}); });
 routes.get('/places/token', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var token;
     return __generator(this, function (_a) {
